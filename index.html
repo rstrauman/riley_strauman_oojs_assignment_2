@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Riley Strauman">
+        <meta name="description" content="Images in HTML">
+        <meta name="keywords" content="html, css, web, web development, javascript">
+        <title>Shape Factory</title>
+        <link rel="icon" href="./assets/media/favicon.png?v=2" type="image/x-icon">
+        <link rel="Stylesheet" href="assets/styles/style.css" media="all">
+    </head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Shape Factory</h1>
+            <div class="outer-container">
+                <div class="select-container">
+                    <div>
+                        <select id="shape-button" class="btn shp">
+                            <option value="circle">Circle</option>
+                            <option value="square">Square</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="color-button" class="btn col">
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                            <option value="orange">Orange</option>
+                            <option value="pink">Pink</option>
+                            <option value="purple">Purple</option>
+                        </select>
+                    </div>
+                    <button id="create-button" class="button">Create</button>
+                </div>
+                <div id="grid-container" class="grid-container">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/scripts/app.js"></script>
+</body>
+</html>

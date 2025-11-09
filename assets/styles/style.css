@@ -1,0 +1,100 @@
+@import "./container.css";
+
+main {
+    background-color: #171A22;
+    font-weight: 500;
+}
+
+h1 {
+    padding-top: 75px;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+/***************************************/
+/*            Containers               */
+/***************************************/
+
+.outer-container {
+    margin: auto;
+    padding: 25px;
+}
+
+.select-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    text-align: center;
+    width: 100%;
+    gap: 10px;
+}
+
+/***************************************/
+/*              Buttons                */
+/***************************************/
+
+select {
+    appearance: none;
+}
+
+.btn, .button {
+    color: white;
+}
+
+.btn, .grid-container {
+    border: 1px solid #24262E;
+}
+
+.btn, .grid-container, .button {
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 12px 112px;
+    background-color: #272A31;
+}
+
+.button {
+    background-color: #FF7C17;
+    padding: 12px 40px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #000;
+}
+
+/***************************************/
+/*                Grid                 */
+/***************************************/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 12px;
+    justify-content: center;
+    align-content: flex-end;
+    align-items: center;
+    min-height: 460px;
+    width: 100%;
+    background-color: #272A31;
+    padding: 20px;
+}
+
+/***************************************/
+/*               Shapes                */
+/***************************************/
+
+.shape {
+    width: 100px;
+    height: 100px;
+    align-self: end;
+}
+
+.square {
+    border-radius: 5px;
+}
+
+.circle {
+    border-radius: 50%;
+}
