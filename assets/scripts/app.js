@@ -6,8 +6,11 @@ const createButton = document.getElementById('create-button');
 const shapeButton = document.getElementById('shape-button');
 const colorButton = document.getElementById('color-button');
 const grid = document.getElementById('grid-container');
+const selectContainer = document.getElementById('select-container');
 
-const shapes = [];
+let shapes = [];
+let hasRemoveButton = false;
+let removeDiv = null;
 
 // Object
 
@@ -58,9 +61,32 @@ function createShape(){
             const firstShape = grid.querySelector('.shape');
             if(firstShape) firstShape.remove();
         }
+
+        if(!hasRemoveButton) {
+            removeDiv = document.createElement('div');
+            removeDiv.innerHTML = 'Reset';
+            removeDiv.classList.add('remove-button')
+            hasRemoveButton = true;
+            selectContainer.appendChild(removeDiv);
+            removeDiv.addEventListener('click', removeAll);
+        }
+
         shapeDiv.addEventListener('click', () => {
         alert(shape.getInfo());
     });
     }
+
+// Remove function
+
+function removeAll(){
+    const shapesElements = document.querySelectorAll(".shape");
+
+    for(let i = 0; i < shapesElements.length; i++){
+        shapesElements[i].remove();
+    }
+    document.querySelector('.remove-button').remove();
+    shapes = [];
+    hasRemoveButton = false;
+}
 
 createButton.addEventListener('click', createShape);
